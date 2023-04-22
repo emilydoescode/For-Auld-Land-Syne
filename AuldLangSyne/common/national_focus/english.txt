@@ -1,0 +1,208 @@
+﻿#	focus = {
+#		id = ENG
+#		icon = GFX_goal_generic_construction
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -1
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+
+
+focus_tree = {
+	id = english_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = END
+		}
+
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 1000 y = 1000 }
+
+######  ####### #       ### ####### ###  #####     #    #       
+#     # #     # #        #     #     #  #     #   # #   #       
+#     # #     # #        #     #     #  #        #   #  #       
+######  #     # #        #     #     #  #       #     # #       
+#       #     # #        #     #     #  #       ####### #       
+#       #     # #        #     #     #  #     # #     # #       
+#       ####### ####### ###    #    ###  #####  #     # ####### 
+
+focus = {
+	id = END_the_great_compromise
+	icon = GFX_focus_generic_treaty
+	x = 1
+	y = 2
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+		
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		
+	}
+}
+
+
+focus = {
+	id = END_sorrow_of_the_greats
+	icon = GFX_END_sorrow_of_the_greats
+	x = 1
+	y = 2
+	relative_position_id = END_the_great_compromise
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+		
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_political_power = 10
+		set_stability = 30
+	}
+}
+
+focus = {
+	id = END_the_wesminster_convention
+	icon = GFX_END_the_westminser_convention
+	prerequisite = { focus = END_sorrow_of_the_greats }
+	x = 1
+	y = 2
+	relative_position_id = END_sorrow_of_the_greats
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+		
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		create_faction = "The Westminster Alliance"
+			}
+		}
+}
+
+focus = {
+	id = END_unholy_alliance
+	icon = GFX_END_unholy_alliance
+	prerequisite = { focus = END_the_wesminster_convention }
+	mutually_exclusive = { focus = END_rekindle_the_old_alliance focus = END_the_commonwealth_compromise}
+	x = 1
+	y = 2
+	relative_position_id = END_the_wesminster_convention
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+		
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+        
+	}
+}
+
+
+
+
+
